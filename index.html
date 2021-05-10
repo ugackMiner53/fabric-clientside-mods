@@ -1,0 +1,112 @@
+<html>
+    <!--
+        Website Created by ugackMiner
+        
+        Last edited on 5/10/2021
+
+        Some mods may not work with each other
+    -->
+    <head>
+        <title>Fabric Client Side Mods</title>
+        <link rel="icon" type="image/png" href="https://fabricmc.net/assets/logo.png">
+        <script>
+            function modeChange()
+                {
+                    var optifine = document.getElementsByClassName("optifine");
+                    var normal = document.getElementsByClassName("normal");
+                    if (document.getElementById("optifine-selector").value == "normal")
+                    {
+                        console.log("Changed to normal");
+                        disableArray(optifine, true);
+                        disableArray(normal, false);
+                    
+                    }
+                    else 
+                    {
+                        console.log("Changed to optifine");
+                        disableArray(optifine, false);
+                        disableArray(normal, true);
+                    }
+                }
+
+            function disableArray(array, disabled)
+            {
+                for (var i = 0; i < array.length; i++) {
+                    array.item(i).hidden = disabled;
+                 }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Fabric Client Side Mod List</h1>
+        <h3>Hover over the links for a description of what the mod does</h3>
+        <p>Inspiration taken from <a href="https://github.com/JDar2K/Fabric-Clientside-Pack" target="_blank">here</a></p>
+        <label for="optifine-selector">Choose a mode:</label>
+        <select onchange="modeChange()" id="optifine-selector">
+            <option value="">Please Choose an Option</option>
+            <option value="normal">Recommended</option>
+            <option value="optifine">Optifine</option>
+        </select>
+        <h2>Performance</h2>
+        <li title="Optifine" class="optifine"><a target="_blank" href="https://optifine.net/downloads">Optifine</a></li>
+        <li title="A mod which highly increases frames" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/sodium">Sodium</a></li>
+        <li title="A mod which increases performance with lighting" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/phosphor">Phosphor</a></li>
+        <li title="A mod which increases general performance with server ticks" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium</a></li>
+        <li title="A mod which changes the default networking stack for Minecraft" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/krypton">Krypton</a></li>
+        
+        
+        <h2>External Things</h2>
+        <li title="A mod which starts Minecraft more smoothly" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/smooth-boot">Smooth Boot</a></li>
+        <li title="A mod which makes Minecraft not render stuff when minimized" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/dynamic-fps">Dynamic FPS</a></li>
+        <li title="A mod which copies the screenshot you just took to your clipboard" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/screenshot-to-clipboard-fabric">Screenshot to Clipboard</a></li>
+        <li title="A mod which lets you edit the default Minecraft message in discord" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/craftpresence">Craftpresence</a></li>
+        <li title="A mod which makes a noise once minecraft fully loads" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/pling" >Pling</a></li>
+        
+        
+        
+        <h2>Quality of life</h2>
+        <li title="Recreation of optifine dynamic lights" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights">LambDynamicLights</a></li>
+        <li title="Recreation of the optifine zoom" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/logical-zoom">Logical Zoom</a></li>
+        <li title="Allows you to see optifine/labymod/minecraftcapes/winutils capes" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/capes">Fabric Capes</a></li>
+        <li title="Allows you to see saturation and more food values" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/appleskin">Appleskin</a></li>
+        <li title="A mod which tells you what block you are looking at, as well as entity health" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/hwyla" >Hwyla</a></li>
+        <li title="An addon for Hwyla which lets you see the stats of a horse" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/hwyla-addon-horse-info" >Hwyla Horse Info</a></li>
+        <li title="A mod which allows you to view what is in a shulker box without opening it" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/shulkerboxtooltip" >ShulkerBoxTooltip</a></li>
+        <li title="A mod which lets you see crafting recipes for items" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items" >Roughly Enough Items</a></li>
+        <li title="An addon to REI which allows you to search inventories for items" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/roughly-searchable" >Roughly Searchable</a></li>
+        <li title="A mod which gives mobs the glowing effect when you cannot sleep in a bed" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/monsters-in-the-closet" >Monsters in the Closet</a></li>
+        <li title="A mod which adds a minimap and waypoints" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap" >Xaeros Minimap</a></li>
+        <li title="A mod which adds a world map" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map">Xaeros World Map</a></li>
+        <li title="A mod which adds shortcuts when using the scroll wheel in inventories" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/mouse-wheelie">Mouse Wheelie</a></li>
+        <li title="A mod which lets you see where mobs will spawn" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/light-overlay">Light Overlay</a></li>
+        <li title="A mod which changes the bars in the tab list to be numbers" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/better-ping-display-fabric">Better Ping Display</a></li>
+        <li title="A mod which allows you to see the owner of a pet" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/pet-owner">Pet Owner</a></li>
+        <li title="A mod which removes the dumb message about experimental world settings" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/fabric-disable-custom-worlds-advice">Disable Custom World Advice</a></li>
+        <li title="A mod which adds a tab to the creative GUI with normally unobtainable items" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/op-items-tab">OP Items Tab</a></li>
+        <li title="A mod which lets you click blocks behind item frames or signs (sneak to disable)" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/clickthrough/">Clickthrough</a></li>
+        
+        
+        
+        
+        <h2>Options</h2>
+        <li title="A simple mod which lets you view the mods you have and access their config easier" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/modmenu" >ModMenu</a></li>
+        <li title="A mod which changes sodium's menu to look more like Minecraft's normal menu" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/better-sodium-video-settings-button">Sodium Video Settings</a></li>
+        
+        
+        
+        
+        
+        <h2>Libraries</h2>
+        <li title="A required mod for basically all mods here" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a></li>
+        <li title="Required mod to let optifine run on fabric" class="optifine"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/optifabric">Optifabric</a></li>
+        <li title="Required library mod for the Capes mod" class="normal"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin">Fabric Kotlin</a></li>
+        <li title="A required mod for the Light Overlay mod" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/architectury-fabric">Architectury API</a></li>
+        <li title="A required mod for the Light Overlay mod (x2)" class="both"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/cloth-config">Cloth Config API</a></li>
+        
+        
+
+        <!--
+        <li title="" class="both"><a target="_blank" href=""></a></li>
+        -->
+    </body>
+</html>
